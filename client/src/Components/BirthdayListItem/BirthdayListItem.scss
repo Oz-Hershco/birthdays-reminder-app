@@ -1,0 +1,62 @@
+@import "../../App.scss";
+
+.BirthdayListItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em;
+    cursor: pointer;
+    border-bottom: 1px solid $grey;
+    user-select: none;
+}
+
+.BirthdayListItem:hover {
+    background-color: $grey;
+}
+
+.BirthdayListItem:active {
+    background-color: darken($color: $grey, $amount: 2);
+}
+
+.BirthdayListItem .BirthdayListItem--MetadataContainer {
+    display: flex;
+    align-items: center;
+}
+
+.BirthdayListItem .BirthdayListItem--ProfilePic {
+    width: auto;
+    height: 3em;
+    border-radius: 50%;
+    margin-right: 0.5em;
+}
+
+.BirthdayListItem .BirthdayListItem--ProfileName,
+.BirthdayListItem .BirthdayListItem--ProfileSubtitle {
+    margin: 0;
+}
+
+.BirthdayListItem .BirthdayListItem--ProfileName {
+    font-weight: 700;
+}
+
+.BirthdayListItem .BirthdayListItem--ProfileSubtitle {
+    color: grey;
+    font-weight: 400;
+    font-size: 9pt;
+}
+
+.BirthdayListItem .BirthdayListItem--DeleteBtn {
+    font-size: 8pt;
+    background-color: transparent;
+    color: red;
+    border: 1px solid red;
+    border-radius: 2px;
+    padding: 3px 5px;
+    cursor: pointer;
+}
+
+.BirthdayListItem .BirthdayListItem--DeleteBtn:active {
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+}

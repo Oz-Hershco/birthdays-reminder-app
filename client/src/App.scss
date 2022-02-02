@@ -1,0 +1,12 @@
+//Colors
+$grey:#F2F2F2;
+$pink:#F23D6D;
+$purple:#BF4EB8;
+$yellow: #F2B035;
+$blue:#405BFF;
+$orange:#FF772F;
+
+.App{
+  background-color: lighten($color: $purple, $amount: 30);
+  height: 100vh;
+}

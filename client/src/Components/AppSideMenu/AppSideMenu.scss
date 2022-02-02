@@ -1,0 +1,85 @@
+@import "../../App.scss";
+
+.AppSideMenu {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    transition: ease-in-out 500ms;
+    background-color: white;
+}
+
+.AppSideMenu .AppSideMenu--ListContainer.Empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em;
+    height: 100%;
+}
+
+.AppSideMenu .AppSideMenu--ListContainer.Empty p {
+    font-weight: 300;
+    font-size: 11pt;
+    margin: 0;
+    text-align: center;
+    color: lighten($color: #000000, $amount: 60);
+}
+
+.AppSideMenu.Open {
+    left: 0;
+}
+
+.AppSideMenu.Closed {
+    left: -300px;
+}
+
+.AppSideMenu .AppSideMenu--ToggleBtn {
+    display: flex;
+    align-items: center;
+    padding: 0.4em 1em;
+    background-color: white;
+    position: absolute;
+    top: 52px;
+    left: 22.5em;
+    color: #f23d6d;
+    font-size: 10pt;
+    font-weight: 600;
+    border-top: 1px solid #f23d6d;
+    border-bottom: 1px solid #f23d6d;
+    border-right: 1px solid #f23d6d;
+    border-left: none;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    cursor: pointer;
+}
+
+.AppSideMenu .AppSideMenu--ToggleBtn.Closed {
+    display: flex;
+    align-items: center;
+    padding: 0.75em 1em;
+    background-color: white;
+    position: absolute;
+    width: max-content;
+    top: 52px;
+    left: 22.5em;
+    color: $purple;
+    font-size: 10pt;
+    font-weight: 600;
+    border-top: 1px solid $purple;
+    border-bottom: 1px solid $purple;
+    border-right: 1px solid $purple;
+    border-left: none;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    cursor: pointer;
+}
+
+.AppSideMenu .AppSideMenu--ToggleBtn div {
+    transform: rotate(45deg);
+    font-size: 18pt;
+    font-weight: 300;
+    margin-right: 2px;
+}
+
+.AppSideMenu .AppSideMenu--ToggleBtn p {
+    margin: 0;
+}
