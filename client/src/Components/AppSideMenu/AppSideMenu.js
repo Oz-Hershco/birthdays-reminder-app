@@ -15,7 +15,7 @@ function AppSideMenu({ list }) {
                     <button onClick={()=>{setIsOpen(!isOpen)}} className="AppSideMenu--ToggleBtn Open"><div>+</div>Close</button>
                 ):
                 (
-                    <button onClick={()=>{setIsOpen(!isOpen)}} className="AppSideMenu--ToggleBtn Closed"><p>🎂 Birthdays List</p></button>
+                    <button onClick={()=>{setIsOpen(!isOpen)}} className="AppSideMenu--ToggleBtn Closed"><p>🎂 Birthdays List ({list.length})</p></button>
                 )
             }
            
@@ -24,7 +24,7 @@ function AppSideMenu({ list }) {
                 {
                     list.length ? 
                     list.map((item) => {
-                        return <BirthdayListItem key={item.id} id={item.id} src={item.img} name={item.name} subtitle={item.dob} />
+                        return <BirthdayListItem key={item.id} item={item} />
                     }) : 
                     <p>No birthdays to show. Add something and you'll find it here!</p>
                 }

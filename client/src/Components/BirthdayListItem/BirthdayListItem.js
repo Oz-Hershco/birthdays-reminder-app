@@ -1,24 +1,29 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { updateBirthdaysList } from '../../Redux/birthdaysListSlice';
+import { setSelectedBirthday } from '../../Redux/selectedBirthdaySlice';
 import './BirthdayListItem.scss';
 
-export default function BirthdayListItem({ id, src, name, subtitle }) {
+export default function BirthdayListItem({ item }) {
 
     const birthdaysList = useSelector((state) => state.birthdays.value);
     const dispatch = useDispatch();
 
     const handleDeleteItem = () => {
-        const newBirthdaysList = birthdaysList.filter((item) => item.id !== id);
+        const newBirthdaysList = birthdaysList.filter((bday) => bday.id !== item.id);
         dispatch(updateBirthdaysList(newBirthdaysList));
     }
 
+    const handleSelectItem = () => {
+        dispatch(setSelectedBirthday(item));
+    }
+  
     return (
-        <div className="BirthdayListItem">
+        <div onClick={handleSelectItem} className="BirthdayListItem">
             <div className="BirthdayListItem--MetadataContainer">
-                <img className="BirthdayListItem--ProfilePic" src={src} alt="profile" />
+                <img className="BirthdayListItem--ProfilePic" src={item.img} alt="profile" />
                 <div>
-                    <p className="BirthdayListItem--ProfileName">{name}</p>
-                    <p className="BirthdayListItem--ProfileSubtitle">{subtitle}</p>
+                    <p className="BirthdayListItem--ProfileName">{item.name}</p>
+                    <p className="BirthdayListItem--ProfileSubtitle">{item.dob}</p>
                 </div>
             </div>
 

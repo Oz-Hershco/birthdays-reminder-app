@@ -7,6 +7,9 @@ $blue:#405BFF;
 $orange:#FF772F;
 
 .App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: lighten($color: $purple, $amount: 30);
   height: 100vh;
 }
