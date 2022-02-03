@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <AppSideMenu list={birthdaysList} />
-      <BirthdayCard person={selectedBirthday}/>
+      <BirthdayCard person={birthdaysList[selectedBirthday]} />
     </div>
   );
 }

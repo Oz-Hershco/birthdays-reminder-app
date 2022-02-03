@@ -8,25 +8,27 @@ function AppSideMenu({ list }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className={isOpen ? "AppSideMenu Open" :  "AppSideMenu Closed"}>
-            {
-                isOpen ?
-                (
-                    <button onClick={()=>{setIsOpen(!isOpen)}} className="AppSideMenu--ToggleBtn Open"><div>+</div>Close</button>
-                ):
-                (
-                    <button onClick={()=>{setIsOpen(!isOpen)}} className="AppSideMenu--ToggleBtn Closed"><p>🎂 Birthdays List ({list.length})</p></button>
-                )
-            }
-           
-            <div className={list.length ? "AppSideMenu--ListContainer" : "AppSideMenu--ListContainer Empty"}>
-                
+        <div className={isOpen ? "AppSideMenu Open" : "AppSideMenu Closed"}>
+   
+            <button onClick={() => { setIsOpen(!isOpen) }} className={isOpen ? "AppSideMenu--ToggleBtn Open" : "AppSideMenu--ToggleBtn Closed"}>
                 {
-                    list.length ? 
-                    list.map((item) => {
-                        return <BirthdayListItem key={item.id} item={item} />
-                    }) : 
-                    <p>No birthdays to show. Add something and you'll find it here!</p>
+                    isOpen ?
+                        (
+                            <><div>+</div>Close</>
+                        ) :
+                        (
+                            <p>🎂 Birthdays List ({list.length})</p>
+                        )
+                }
+            </button>
+            <div className={list.length ? "AppSideMenu--ListContainer" : "AppSideMenu--ListContainer Empty"}>
+
+                {
+                    list.length ?
+                        list.map((item) => {
+                            return <BirthdayListItem key={item.id} item={item} />
+                        }) :
+                        <p>No birthdays to show. Add something and you'll find it here!</p>
                 }
             </div>
         </div>

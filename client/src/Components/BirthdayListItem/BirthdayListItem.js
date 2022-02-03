@@ -6,6 +6,7 @@ import './BirthdayListItem.scss';
 export default function BirthdayListItem({ item }) {
 
     const birthdaysList = useSelector((state) => state.birthdays.value);
+    const selectedBirthday = useSelector((state)=> state.selectedBirthday.value);
     const dispatch = useDispatch();
 
     const handleDeleteItem = () => {
@@ -14,11 +15,12 @@ export default function BirthdayListItem({ item }) {
     }
 
     const handleSelectItem = () => {
-        dispatch(setSelectedBirthday(item));
+        const indexOfSelectedItem = birthdaysList.findIndex((bday) => bday.id === item.id);
+        dispatch(setSelectedBirthday(indexOfSelectedItem));
     }
-  
+
     return (
-        <div onClick={handleSelectItem} className="BirthdayListItem">
+        <div onClick={handleSelectItem} className={item.id === birthdaysList[selectedBirthday].id ? "BirthdayListItem Active" : "BirthdayListItem"}>
             <div className="BirthdayListItem--MetadataContainer">
                 <img className="BirthdayListItem--ProfilePic" src={item.img} alt="profile" />
                 <div>

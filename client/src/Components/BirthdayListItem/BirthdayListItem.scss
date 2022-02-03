@@ -10,6 +10,10 @@
     user-select: none;
 }
 
+.BirthdayListItem.Active {
+    background-color: aliceblue;
+}
+
 .BirthdayListItem:hover {
     background-color: $grey;
 }

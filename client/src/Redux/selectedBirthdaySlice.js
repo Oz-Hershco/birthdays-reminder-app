@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const selectedBirthdaySlice = createSlice({
   name: 'selectedBirthday',
   initialState: {
-    value: null,
+    value: 0,
   },
   reducers: {
     setSelectedBirthday: (state, action) => {

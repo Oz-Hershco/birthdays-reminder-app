@@ -35,7 +35,7 @@
 .AppSideMenu .AppSideMenu--ToggleBtn {
     display: flex;
     align-items: center;
-    padding: 0.4em 1em;
+    padding: 0.3em 1em;
     background-color: white;
     position: absolute;
     top: 52px;
@@ -50,6 +50,7 @@
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
     cursor: pointer;
+    height: 3em;
 }
 
 .AppSideMenu .AppSideMenu--ToggleBtn.Closed {

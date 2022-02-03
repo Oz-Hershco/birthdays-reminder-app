@@ -1,0 +1,33 @@
+@import "../../App.scss";
+
+.Timer {
+    color: $blue;
+
+    margin: 0;
+    border: 1px solid $blue;
+    padding: 0.2em 0.5em;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Timer .Timer--Section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Timer .Timer--Section .Timer--UnitValue {
+    font-size: 22pt;
+}
+
+.Timer .Timer--Section .Timer--UnitLabel {
+    font-size: 8pt;
+    margin-top: -5px;
+}
+
+.Timer p{
+    margin: 0;
+}

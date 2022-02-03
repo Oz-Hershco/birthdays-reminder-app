@@ -1,5 +1,5 @@
 import React from 'react';
-import { setSelectedBirthday } from '../../Redux/selectedBirthdaySlice';
+import Timer from '../Timer/Timer';
 import './BirthdayCard.scss';
 
 export default function BirthdayCard({ person }) {
@@ -19,7 +19,7 @@ export default function BirthdayCard({ person }) {
                             <p className='BirthdayCard--Age'>{age} YEARS OLD</p>
                         </div>
                         <div className='BirthdayCard--Footer'>
-                            <p className='BirthdayCard--Timer'>00:00:00</p>
+                            <Timer expectedDate={new Date(person.dob)}/>
                         </div>
                     </> :
                     <>
@@ -29,7 +29,6 @@ export default function BirthdayCard({ person }) {
                         <div className='BirthdayCard--Footer'>
                         </div>
                     </>
-
             }
 
         </div>
