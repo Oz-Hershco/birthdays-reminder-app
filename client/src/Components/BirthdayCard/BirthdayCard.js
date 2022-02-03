@@ -6,6 +6,9 @@ export default function BirthdayCard({ person }) {
     const age = person && Math.floor(((new Date() - new Date(person.dob)) / (1000 * 3600 * 24)) / 365);
     return (
         <div className={person ? 'BirthdayCard' : 'BirthdayCard Empty'}>
+            <div className='BirthdayCard--Header'>
+                MAIN DISPLAY
+            </div>
             {
                 person ?
                     <>
@@ -19,7 +22,14 @@ export default function BirthdayCard({ person }) {
                             <p className='BirthdayCard--Timer'>00:00:00</p>
                         </div>
                     </> :
-                    <p className='Empty'>Nothing to show at this time.</p>
+                    <>
+                        <div className='BirthdayCard--Body'>
+                            <p className='Empty'>Nothing to show at this time.</p>
+                        </div>
+                        <div className='BirthdayCard--Footer'>
+                        </div>
+                    </>
+
             }
 
         </div>

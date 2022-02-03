@@ -26,7 +26,6 @@ export default function BirthdayListItem({ item }) {
                     <p className="BirthdayListItem--ProfileSubtitle">{item.dob}</p>
                 </div>
             </div>
-
             <button onClick={handleDeleteItem} type="button" className="BirthdayListItem--DeleteBtn">DELETE</button>
         </div>
     );
