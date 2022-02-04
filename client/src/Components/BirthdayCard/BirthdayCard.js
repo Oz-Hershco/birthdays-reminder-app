@@ -1,4 +1,5 @@
 import React from 'react';
+import { formattedDashedDate } from '../../Const/Methods';
 import Timer from '../Timer/Timer';
 import './BirthdayCard.scss';
 
@@ -15,7 +16,7 @@ export default function BirthdayCard({ person }) {
                         <div className='BirthdayCard--Body'>
                             <img className='BirthdayCard--ProfileImg' src={person.img} alt='profile' />
                             <p className='BirthdayCard--Name'>{person.name}</p>
-                            <p className='BirthdayCard--DOB'>{person.dob}</p>
+                            <p className='BirthdayCard--DOB'>{formattedDashedDate(person.dob)}</p>
                             <p className='BirthdayCard--Age'>{age} YEARS OLD</p>
                         </div>
                         <div className='BirthdayCard--Footer'>

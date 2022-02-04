@@ -19,7 +19,7 @@
 }
 
 .BirthdayListItem:active {
-    background-color: darken($color: $grey, $amount: 2);
+    background-color: darken($color: aliceblue, $amount: 5);
 }
 
 .BirthdayListItem .BirthdayListItem--MetadataContainer {
@@ -28,10 +28,11 @@
 }
 
 .BirthdayListItem .BirthdayListItem--ProfilePic {
-    width: auto;
+    width: 3em;
     height: 3em;
     border-radius: 50%;
     margin-right: 0.5em;
+    object-fit: cover;
 }
 
 .BirthdayListItem .BirthdayListItem--ProfileName,

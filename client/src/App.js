@@ -1,8 +1,9 @@
 import { useSelector } from 'react-redux';
 import './App.scss';
 
-import AppSideMenu from './Components/AppSideMenu/AppSideMenu';
+import BirthdayListMenu from './Components/BirthdayListMenu/BirthdayListMenu';
 import BirthdayCard from './Components/BirthdayCard/BirthdayCard';
+import AddBirthdayMenu from './Components/AddBirthdayMenu/AddBirthdayMenu';
 
 function App() {
 
@@ -11,8 +12,9 @@ function App() {
 
   return (
     <div className="App">
-      <AppSideMenu list={birthdaysList} />
+      <BirthdayListMenu list={birthdaysList} />
       <BirthdayCard person={birthdaysList[selectedBirthday]} />
+      <AddBirthdayMenu />
     </div>
   );
 }

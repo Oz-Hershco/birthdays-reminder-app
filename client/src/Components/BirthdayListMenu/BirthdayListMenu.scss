@@ -1,14 +1,14 @@
 @import "../../App.scss";
 
-.AppSideMenu {
+.BirthdayListMenu {
     width: 300px;
     height: 100%;
-    position: absolute;
+    position: fixed;
     transition: ease-in-out 500ms;
     background-color: white;
 }
 
-.AppSideMenu .AppSideMenu--ListContainer.Empty {
+.BirthdayListMenu .BirthdayListMenu--ListContainer.Empty {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +16,7 @@
     height: 100%;
 }
 
-.AppSideMenu .AppSideMenu--ListContainer.Empty p {
+.BirthdayListMenu .BirthdayListMenu--ListContainer.Empty p {
     font-weight: 300;
     font-size: 11pt;
     margin: 0;
@@ -24,21 +24,21 @@
     color: lighten($color: #000000, $amount: 60);
 }
 
-.AppSideMenu.Open {
+.BirthdayListMenu.Open {
     left: 0;
 }
 
-.AppSideMenu.Closed {
+.BirthdayListMenu.Closed {
     left: -300px;
 }
 
-.AppSideMenu .AppSideMenu--ToggleBtn {
+.BirthdayListMenu .BirthdayListMenu--ToggleBtn {
     display: flex;
     align-items: center;
     padding: 0.3em 1em;
     background-color: white;
     position: absolute;
-    top: 52px;
+    top: 30px;
     left: 22.5em;
     color: #f23d6d;
     font-size: 10pt;
@@ -53,34 +53,21 @@
     height: 3em;
 }
 
-.AppSideMenu .AppSideMenu--ToggleBtn.Closed {
-    display: flex;
-    align-items: center;
-    padding: 0.75em 1em;
-    background-color: white;
-    position: absolute;
+.BirthdayListMenu .BirthdayListMenu--ToggleBtn.Closed {
     width: max-content;
-    top: 52px;
-    left: 22.5em;
     color: $purple;
-    font-size: 10pt;
-    font-weight: 600;
     border-top: 1px solid $purple;
     border-bottom: 1px solid $purple;
     border-right: 1px solid $purple;
-    border-left: none;
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
-    cursor: pointer;
 }
 
-.AppSideMenu .AppSideMenu--ToggleBtn div {
+.BirthdayListMenu .BirthdayListMenu--ToggleBtn div {
     transform: rotate(45deg);
     font-size: 18pt;
     font-weight: 300;
     margin-right: 2px;
 }
 
-.AppSideMenu .AppSideMenu--ToggleBtn p {
+.BirthdayListMenu .BirthdayListMenu--ToggleBtn p {
     margin: 0;
 }

@@ -6,11 +6,19 @@ export default function Timer({ expectedDate }) {
 
     const [newExpectedDate, setNewExpectedDate] = useState(expectedDate);
 
+    const today = new Date();
+    const midnight = new Date();
+    midnight.setHours(24);
+    midnight.setMinutes(0);
+    midnight.setSeconds(0);
+    midnight.setMilliseconds(0)
+    const expectedDateThisYear = new Date(today.getFullYear(), expectedDate.getMonth(), expectedDate.getDate());
+    const timeLeft = new Date(expectedDateThisYear < today ? today.getFullYear() + 1 : today.getFullYear(), expectedDate.getMonth(), expectedDate.getDate());
+
     useEffect(() => {
 
         const countdownTimer = setInterval(() => {
-            const expectedDateThisYear = new Date(today.getFullYear(), expectedDate.getMonth(), expectedDate.getDate())
-            setNewExpectedDate(new Date(expectedDateThisYear < today ? today.getFullYear() + 1 : today.getFullYear(), expectedDate.getMonth(), expectedDate.getDate()));
+            setNewExpectedDate(timeLeft);
         }, 1000);
 
         return () => {
@@ -18,14 +26,9 @@ export default function Timer({ expectedDate }) {
         };
     }, [newExpectedDate]);
 
-    const today = new Date();
-    const midnight = new Date();
-    midnight.setHours(24);
-    midnight.setMinutes(0);
-    midnight.setSeconds(0);
-    midnight.setMilliseconds(0)
 
-    const daysLeft = Math.floor((newExpectedDate.getTime() - today.getTime()) / (1000 * 3600 * 24));
+
+    const daysLeft = Math.floor((timeLeft.getTime() - today.getTime()) / (1000 * 3600 * 24));
     const secondsLeft = Math.floor((midnight.getTime() - today.getTime()) / 1000);
     const minutesLeft = Math.floor(secondsLeft / 60);
     const hoursLeft = Math.floor(minutesLeft / 60);

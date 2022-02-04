@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
 import BirthdayListItem from '../BirthdayListItem/BirthdayListItem';
-import './AppSideMenu.scss';
+import './BirthdayListMenu.scss';
 
-function AppSideMenu({ list }) {
+function BirthdayListMenu({ list }) {
 
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className={isOpen ? "AppSideMenu Open" : "AppSideMenu Closed"}>
+        <div className={isOpen ? "BirthdayListMenu Open" : "BirthdayListMenu Closed"}>
    
-            <button onClick={() => { setIsOpen(!isOpen) }} className={isOpen ? "AppSideMenu--ToggleBtn Open" : "AppSideMenu--ToggleBtn Closed"}>
+            <button onClick={() => { setIsOpen(!isOpen) }} className={isOpen ? "BirthdayListMenu--ToggleBtn Open" : "BirthdayListMenu--ToggleBtn Closed"}>
                 {
                     isOpen ?
                         (
@@ -21,7 +21,7 @@ function AppSideMenu({ list }) {
                         )
                 }
             </button>
-            <div className={list.length ? "AppSideMenu--ListContainer" : "AppSideMenu--ListContainer Empty"}>
+            <div className={list.length ? "BirthdayListMenu--ListContainer" : "BirthdayListMenu--ListContainer Empty"}>
 
                 {
                     list.length ?
@@ -35,5 +35,5 @@ function AppSideMenu({ list }) {
     );
 }
 
-export default AppSideMenu;
+export default BirthdayListMenu;
 

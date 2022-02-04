@@ -42,9 +42,10 @@ transform: scale(1.1);
 }
 
 .BirthdayCard .BirthdayCard--ProfileImg {
-    width: auto;
+    width: 10em;
     height: 10em;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .BirthdayCard .BirthdayCard--Name {
