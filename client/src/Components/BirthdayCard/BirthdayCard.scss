@@ -11,12 +11,8 @@
     width: 100%;
     max-width: 18em;
     height: 22.5em;
-    transition: ease-in-out 200ms;
     cursor: default;
-}
-
-.BirthdayCard:hover {
-transform: scale(1.1);
+    margin: 0 1em;
 }
 
 .BirthdayCard .BirthdayCard--Header {

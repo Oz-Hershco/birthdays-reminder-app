@@ -4,6 +4,7 @@ import './App.scss';
 import BirthdayListMenu from './Components/BirthdayListMenu/BirthdayListMenu';
 import BirthdayCard from './Components/BirthdayCard/BirthdayCard';
 import AddBirthdayMenu from './Components/AddBirthdayMenu/AddBirthdayMenu';
+import BirthdaysTodayCard from './Components/BirthdaysTodayCard/BirthdaysTodayCard';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
       <BirthdayListMenu list={birthdaysList} />
       <BirthdayCard person={birthdaysList[selectedBirthday]} />
+      <BirthdaysTodayCard />
       <AddBirthdayMenu />
     </div>
   );

@@ -4,7 +4,7 @@ import { removeBirthdayById } from '../../Redux/birthdaysListSlice';
 import { setSelectedBirthday } from '../../Redux/selectedBirthdaySlice';
 import './BirthdayListItem.scss';
 
-export default function BirthdayListItem({ item }) {
+export default function BirthdayListItem({ item, isStatic }) {
 
     const birthdaysList = useSelector((state) => state.birthdays.value);
     const selectedBirthday = useSelector((state) => state.selectedBirthday.value);
@@ -24,15 +24,33 @@ export default function BirthdayListItem({ item }) {
     }
 
     return (
-        <div onClick={handleSelectItem} className={item.id === birthdaysList[selectedBirthday].id ? "BirthdayListItem Active" : "BirthdayListItem"}>
-            <div className="BirthdayListItem--MetadataContainer">
-                <img className="BirthdayListItem--ProfilePic" src={item.img} alt="profile" />
-                <div>
-                    <p className="BirthdayListItem--ProfileName">{item.name}</p>
-                    <p className="BirthdayListItem--ProfileSubtitle">{formattedDashedDate(item.dob)}</p>
+
+        isStatic ?
+            (
+                <div className="BirthdayListItem">
+                    <div className="BirthdayListItem--MetadataContainer">
+                        <img className="BirthdayListItem--ProfilePic" src={item.img} alt="profile" />
+                        <div>
+                            <p className="BirthdayListItem--ProfileName">{item.name}</p>
+                            <p className="BirthdayListItem--ProfileSubtitle">{formattedDashedDate(item.dob)}</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <button onClick={handleDeleteItem} type="button" className="BirthdayListItem--DeleteBtn">DELETE</button>
-        </div>
+            ) :
+            (
+                <div onClick={handleSelectItem} className={item.id === birthdaysList[selectedBirthday].id ? "BirthdayListItem Active" : "BirthdayListItem"
+                }>
+                    <div className="BirthdayListItem--MetadataContainer">
+                        <img className="BirthdayListItem--ProfilePic" src={item.img} alt="profile" />
+                        <div>
+                            <p className="BirthdayListItem--ProfileName">{item.name}</p>
+                            <p className="BirthdayListItem--ProfileSubtitle">{formattedDashedDate(item.dob)}</p>
+                        </div>
+                    </div>
+                    <button onClick={handleDeleteItem} type="button" className="BirthdayListItem--DeleteBtn">DELETE</button>
+                </div >
+            )
+
+
     );
 }
