@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import BirthdayListItem from '../BirthdayListItem/BirthdayListItem';
-import './BirthdaysTodayCard.scss';
+import './UpcomingBirthdaysCard.scss';
 
-export default function BirthdaysTodayCard() {
+export default function UpcomingBirthdaysCard() {
 
     const birthdaysList = useSelector((state) => state.birthdays.value);
     const upcomingBirthdaysList = birthdaysList.filter((item) => {
@@ -14,32 +14,32 @@ export default function BirthdaysTodayCard() {
     });
 
     return (
-        <div className="BirthdaysTodayCard">
-            <div className='BirthdaysTodayCard--Header'>
+        <div className="UpcomingBirthdaysCard">
+            <div className='UpcomingBirthdaysCard--Header'>
                 UPCOMING CELEBRATIONS
             </div>
             {
                 upcomingBirthdaysList.length ?
                     (
                         <>
-                            <div className='BirthdaysTodayCard--Body'>
+                            <div className='UpcomingBirthdaysCard--Body'>
                                 {
                                     upcomingBirthdaysList.map((item) => {
                                         return <BirthdayListItem key={item.id} item={item} isStatic={true} />
                                     })
                                 }
                             </div>
-                            <div className='BirthdaysTodayCard--Footer'>
+                            <div className='UpcomingBirthdaysCard--Footer'>
 
                             </div>
                         </>
                     ) :
                     (
                         <>
-                            <div className='BirthdaysTodayCard--Body Empty'>
+                            <div className='UpcomingBirthdaysCard--Body Empty'>
                                 <p className='Empty'>No upcoming birthdays this month.</p>
                             </div>
-                            <div className='BirthdaysTodayCard--Footer'>
+                            <div className='UpcomingBirthdaysCard--Footer'>
                             </div>
                         </>
                     )

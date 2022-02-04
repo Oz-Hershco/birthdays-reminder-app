@@ -16,6 +16,7 @@ export const birthdaysListSlice = createSlice({
     removeBirthdayById: (state, action) => {
       const id = action.payload;
       state.value = state.value.filter((bday) => bday.id !== id);
+      localStorage.setItem("birthdaysList", JSON.stringify(state.value));
     }
   },
 })
