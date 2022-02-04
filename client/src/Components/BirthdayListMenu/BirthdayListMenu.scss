@@ -17,6 +17,10 @@
     height: 100%;
 }
 
+.BirthdayListMenu .BirthdayListMenu--ListContainer.Empty p {
+    text-align: center;
+}
+
 .BirthdayListMenu .BirthdayListMenu--Wrapper {
     max-height: 100vh;
     overflow-y: auto;

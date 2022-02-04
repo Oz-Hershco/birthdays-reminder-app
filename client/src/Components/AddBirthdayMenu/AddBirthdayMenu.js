@@ -29,7 +29,7 @@ export default function AddBirthdayMenu() {
         dispatch(setSelectedBirthday(0));
     }
 
-    const handleValidation = ()=>{
+    const handleValidation = () => {
         return !fullName.length || !dob.length || !imgUrl.length;
     }
 
@@ -41,8 +41,8 @@ export default function AddBirthdayMenu() {
             <div className="AddBirthdayMenu--FormContainer">
                 <div className="AddBirthdayMenu--FieldContainer">
                     <label>Full Name</label>
-                    <input value={fullName} maxLength={20} onChange={(e) => { setFullName(e.target.value) }} type="text" placeholder='Enter full name' />
-                    <span className="AddBirthdayMenu--LetterCounter">{fullName.length}/20</span>
+                    <input value={fullName} maxLength={30} onChange={(e) => { setFullName(e.target.value) }} type="text" placeholder='Enter full name' />
+                    <span className="AddBirthdayMenu--LetterCounter">{fullName.length}/30</span>
                 </div>
                 <div className="AddBirthdayMenu--FieldContainer">
                     <label>Date of Birth</label>
