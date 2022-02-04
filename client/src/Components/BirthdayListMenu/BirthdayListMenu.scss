@@ -4,6 +4,7 @@
     width: 300px;
     height: 100%;
     position: fixed;
+    top: 0;
     transition: ease-in-out 500ms;
     background-color: white;
 }
@@ -16,7 +17,28 @@
     height: 100%;
 }
 
-.BirthdayListMenu .BirthdayListMenu--ListContainer.Empty p {
+.BirthdayListMenu .BirthdayListMenu--Wrapper {
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.BirthdayListMenu .BirthdayListMenu--Wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.BirthdayListMenu .BirthdayListMenu--Wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.BirthdayListMenu .BirthdayListMenu--Wrapper::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.BirthdayListMenu .BirthdayListMenu--Wrapper::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.BirthdayListMenu .BirthdayListMenu--ListContainer .BirthdayListMenu--ListContainer.Empty p {
     font-weight: 300;
     font-size: 11pt;
     margin: 0;
@@ -70,4 +92,34 @@
 
 .BirthdayListMenu .BirthdayListMenu--ToggleBtn p {
     margin: 0;
+}
+
+@media only screen and (max-width: 425px) {
+    .BirthdayListMenu .BirthdayListMenu--ToggleBtn.Open {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.3em 1em;
+        background-color: white;
+        position: absolute;
+        top: 1em;
+        left: 1.5em;
+        color: $pink;
+        font-size: 10pt;
+        font-weight: 600;
+        border: 1px solid $pink;
+        border-radius: 7px;
+        cursor: pointer;
+        height: 3em;
+        width: 260px;
+    }
+    .BirthdayListMenu .BirthdayListMenu--ListContainer {
+        margin-top: 4em;
+        border-top: 1px solid $grey;
+    }
+
+    .BirthdayListMenu .BirthdayListMenu--Wrapper {
+        max-height: 92vh;
+        overflow-y: auto;
+    }
 }

@@ -6,6 +6,13 @@ import './BirthdaysTodayCard.scss';
 export default function BirthdaysTodayCard() {
 
     const birthdaysList = useSelector((state) => state.birthdays.value);
+    const upcomingBirthdaysList = birthdaysList.filter((item)=>{
+        const expectedDate = new Date(item.dob);
+        const today = new Date();
+        const expectedDateThisYear = new Date(today.getFullYear(), expectedDate.getMonth(), expectedDate.getDate());
+        return today.getMonth() === expectedDateThisYear.getMonth();
+    });
+
     return (
         <div className="BirthdaysTodayCard">
             <div className='BirthdaysTodayCard--Header'>
@@ -13,7 +20,7 @@ export default function BirthdaysTodayCard() {
             </div>
             <div className='BirthdaysTodayCard--Body'>
                 {
-                    birthdaysList.map((item) => {
+                    upcomingBirthdaysList.map((item) => {
                         return <BirthdayListItem key={item.id} item={item} isStatic={true} />
                     })
                 }

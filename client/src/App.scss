@@ -1,15 +1,22 @@
 //Colors
-$grey:#F2F2F2;
-$pink:#F23D6D;
-$purple:#BF4EB8;
-$yellow: #F2B035;
-$blue:#405BFF;
-$orange:#FF772F;
+$grey: #f2f2f2;
+$pink: #f23d6d;
+$purple: #bf4eb8;
+$yellow: #f2b035;
+$blue: #405bff;
+$orange: #ff772f;
 
-.App{
+.App {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: wrap;
   background-color: lighten($color: $purple, $amount: 30);
   height: 100vh;
+}
+
+@media only screen and (max-width: 425px) {
+  .App {
+    padding: 1em;
+  }
 }

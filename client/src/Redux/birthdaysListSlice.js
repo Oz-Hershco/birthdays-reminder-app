@@ -21,7 +21,7 @@ export const birthdaysListSlice = createSlice({
         name: 'Fernanda Weizmann Becker',
         dob: 'October 7 1989',
         img: 'https://scontent.fhfa2-2.fna.fbcdn.net/v/t1.6435-9/145832455_4188321034514775_6646261204331294047_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=uOFY4R8DGg4AX8W5R08&_nc_ht=scontent.fhfa2-2.fna&oh=00_AT_9mZCUE_L7TyJ46uCV4QresWfPsV4tZhvoH5YzH2dA-Q&oe=62225CBE'
-      }
+      },
     ],
   },
   reducers: {

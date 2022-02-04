@@ -9,7 +9,7 @@ function BirthdayListMenu({ list }) {
 
     return (
         <div className={isOpen ? "BirthdayListMenu Open" : "BirthdayListMenu Closed"}>
-   
+
             <button onClick={() => { setIsOpen(!isOpen) }} className={isOpen ? "BirthdayListMenu--ToggleBtn Open" : "BirthdayListMenu--ToggleBtn Closed"}>
                 {
                     isOpen ?
@@ -22,14 +22,15 @@ function BirthdayListMenu({ list }) {
                 }
             </button>
             <div className={list.length ? "BirthdayListMenu--ListContainer" : "BirthdayListMenu--ListContainer Empty"}>
-
-                {
-                    list.length ?
-                        list.map((item) => {
-                            return <BirthdayListItem key={item.id} item={item} />
-                        }) :
-                        <p>No birthdays to show. Add something and you'll find it here!</p>
-                }
+                <div className='BirthdayListMenu--Wrapper'>
+                    {
+                        list.length ?
+                            list.map((item) => {
+                                return <BirthdayListItem key={item.id} item={item} />
+                            }) :
+                            <p>No birthdays to show. Add something and you'll find it here!</p>
+                    }
+                </div>
             </div>
         </div>
     );
