@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Oz-Hershco/birthdays-reminder-app.io/static/css/main.1315887a.css",
-    "main.js": "/Oz-Hershco/birthdays-reminder-app.io/static/js/main.1a33e9ac.js",
-    "static/js/787.cf7adb5f.chunk.js": "/Oz-Hershco/birthdays-reminder-app.io/static/js/787.cf7adb5f.chunk.js",
-    "index.html": "/Oz-Hershco/birthdays-reminder-app.io/index.html",
-    "main.1315887a.css.map": "/Oz-Hershco/birthdays-reminder-app.io/static/css/main.1315887a.css.map",
-    "main.1a33e9ac.js.map": "/Oz-Hershco/birthdays-reminder-app.io/static/js/main.1a33e9ac.js.map",
-    "787.cf7adb5f.chunk.js.map": "/Oz-Hershco/birthdays-reminder-app.io/static/js/787.cf7adb5f.chunk.js.map"
+    "main.css": "/Oz-Hershco/birthdays-reminder/static/css/main.1315887a.css",
+    "main.js": "/Oz-Hershco/birthdays-reminder/static/js/main.5e1de0ab.js",
+    "static/js/787.cf7adb5f.chunk.js": "/Oz-Hershco/birthdays-reminder/static/js/787.cf7adb5f.chunk.js",
+    "index.html": "/Oz-Hershco/birthdays-reminder/index.html",
+    "main.1315887a.css.map": "/Oz-Hershco/birthdays-reminder/static/css/main.1315887a.css.map",
+    "main.5e1de0ab.js.map": "/Oz-Hershco/birthdays-reminder/static/js/main.5e1de0ab.js.map",
+    "787.cf7adb5f.chunk.js.map": "/Oz-Hershco/birthdays-reminder/static/js/787.cf7adb5f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1315887a.css",
-    "static/js/main.1a33e9ac.js"
+    "static/js/main.5e1de0ab.js"
   ]
 }
