@@ -7,12 +7,12 @@ $blue: #405bff;
 $orange: #ff772f;
 
 .App {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: wrap;
   background-color: lighten($color: $purple, $amount: 30);
-  height: 100vh;
 }
 
 @media only screen and (max-width: 425px) {

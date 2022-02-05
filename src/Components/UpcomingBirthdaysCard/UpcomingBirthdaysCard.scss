@@ -12,7 +12,7 @@
     max-width: 18em;
     height: 22.5em;
     cursor: default;
-    margin: 0 1em;
+    margin: 1em;
 }
 
 .UpcomingBirthdaysCard .UpcomingBirthdaysCard--Header {
@@ -33,6 +33,10 @@
     justify-content: center;
 }
 
+.UpcomingBirthdaysCard .UpcomingBirthdaysCard--Body.Empty p {
+    text-align: center;
+}
+
 .UpcomingBirthdaysCard .UpcomingBirthdaysCard--Body::-webkit-scrollbar {
     width: 8px;
 }
@@ -47,4 +51,10 @@
 
 .UpcomingBirthdaysCard .UpcomingBirthdaysCard--Body::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+@media only screen and (max-width: 425px) {
+    .UpcomingBirthdaysCard {
+        margin: 1em 0;
+    }
 }
