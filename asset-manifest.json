@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/birthdays-reminder-app/static/css/main.1315887a.css",
+    "main.css": "/birthdays-reminder-app/static/css/main.376151ce.css",
     "main.js": "/birthdays-reminder-app/static/js/main.1c7d1c52.js",
     "static/js/787.cf7adb5f.chunk.js": "/birthdays-reminder-app/static/js/787.cf7adb5f.chunk.js",
     "index.html": "/birthdays-reminder-app/index.html",
-    "main.1315887a.css.map": "/birthdays-reminder-app/static/css/main.1315887a.css.map",
+    "main.376151ce.css.map": "/birthdays-reminder-app/static/css/main.376151ce.css.map",
     "main.1c7d1c52.js.map": "/birthdays-reminder-app/static/js/main.1c7d1c52.js.map",
     "787.cf7adb5f.chunk.js.map": "/birthdays-reminder-app/static/js/787.cf7adb5f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1315887a.css",
+    "static/css/main.376151ce.css",
     "static/js/main.1c7d1c52.js"
   ]
 }
